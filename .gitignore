@@ -1,0 +1,3 @@
+__pycache__
+.venv/
+docker/db/data/pg-data/
