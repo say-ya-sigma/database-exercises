@@ -10,4 +10,4 @@ class Data:
     posts: List[Post]
     likes: List[Like]
 
-data = Data(users=users, posts=posts, likes=likes)
+data = Data(users=users(), posts=posts(), likes=likes())
