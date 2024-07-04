@@ -1,3 +1,5 @@
+.PHONY: up build down bash seed
+
 up:
 	@docker compose up -d
 
