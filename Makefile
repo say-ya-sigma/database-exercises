@@ -1,5 +1,3 @@
-.PHONY: up build down bash seed
-
 up:
 	@docker compose up -d
 
@@ -14,3 +12,6 @@ bash:
 
 seed:
 	@docker compose exec worker poetry run python worker.py
+
+poetry-install:
+	@docker compose exec worker poetry install
