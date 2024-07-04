@@ -19,5 +19,4 @@ ENV PATH /root/.local/bin:$PATH
 RUN poetry config virtualenvs.in-project true
 
 COPY pyproject.toml poetry.lock ./
-RUN poetry config virtualenvs.in-project true --local
 RUN poetry install
