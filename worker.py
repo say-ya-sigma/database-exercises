@@ -26,7 +26,7 @@ for table_definition in table_definitions:
     table_name = table_definition.table_name
     table_data = getattr(data, table_name)
     for item in table_data:
-        columns = [column.name for column in table_definition.columns]
+        columns = [column.name for column in table_definition.columns if column.name != 'id']
         values = [getattr(item, column) for column in columns]
         insert_query = f"INSERT INTO {table_name} ({', '.join(columns)}) VALUES ({', '.join(['%s'] * len(columns))})"
         cur.execute(insert_query, values)
