@@ -14,4 +14,4 @@ seed:
 	@docker compose exec worker poetry run python worker.py
 
 poetry-install:
-	@docker compose exec worker poetry install
+	@docker compose exec worker poetry install --no-root
